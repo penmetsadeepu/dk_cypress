@@ -13,6 +13,7 @@ describe('Reports Creation', () => {
     });
     it('Create a table Report', () => {
         cy.get('[mattooltip="Visualize"]').click();
+        // comment
         cy.wait(4000);
         cy.get('span.mat-button-wrapper').contains('Report').click();
         cy.wait(4000);
