@@ -30,7 +30,7 @@ describe('Reports Creation', () => {
 
         
         //Unshare Globally
-        /*cy.get('[placeholder = "Search & enter"]').type('sampledashboard');
+        /* cy.get('[placeholder = "Search & enter"]').type('sampledashboard');
         cy.get('.ui-button-icon-left.ui-clickable.pi.pi-refresh').click();
         cy.get('.mat-checkbox-inner-container.mat-checkbox-inner-container-no-side-margin').click();
         cy.wait(2000);
@@ -48,7 +48,7 @@ describe('Reports Creation', () => {
         cy.get('.mat-button-wrapper').contains('Report').click();
         cy.wait(4000);
         // Clicking Search and Enter field and searching for 
-        cy.get('[placeholder = "Search & enter"]').type('lineTF{enter}');
+        cy.get('[placeholder = "Search & enter"]').type('Samplereport{enter}');
        // cy.get('.ui-button-icon-left.ui-clickable.pi.pi-refresh').click();
         cy.get('.mat-checkbox-inner-container.mat-checkbox-inner-container-no-side-margin').click();
        cy.get('.mat-button-wrapper').contains('Share').click();

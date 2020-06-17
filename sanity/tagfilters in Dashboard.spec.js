@@ -16,7 +16,7 @@ describe('Reports Creation', () => {
         cy.get('.fa.fa-bar-chart.mat-icon.notranslate.material-icons.mat-icon-no-color').click();
         cy.wait(2000)
         // Clicking Search and Enter field and searching for lineTF
-        cy.get('[placeholder = "Search & enter"]').type('LineTF');
+        cy.get('[placeholder = "Search & enter"]').type('Sampledashboard');
         cy.get('.ui-button-icon-left.ui-clickable.pi.pi-refresh').click();
         cy.get('.mat-checkbox-inner-container.mat-checkbox-inner-container-no-side-margin').click();
         cy.wait(4000);
