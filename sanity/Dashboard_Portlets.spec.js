@@ -12,11 +12,23 @@ describe('Login', () => {
     it('Checking Dashboard Portlets', () => {
         // clicking visualize button
         cy.get('.fa.fa-bar-chart.mat-icon.notranslate.material-icons.mat-icon-no-color').click();
-        cy.wait(2000)
+        cy.wait(2000);
+        cy.get('[placeholder = "Search & enter"]').type('EnterpriseDashboard{enter}');
+        cy.get('.mat-checkbox-inner-container.mat-checkbox-inner-container-no-side-margin').click();
+        cy.get('.mat-button-wrapper').contains('Favourite').click();
+        cy.wait(3000);
+        //Clicking Monitor button
+        cy.get('mat-icon.fa.fa-heartbeat.mat-icon.notranslate.material-icons.mat-icon-no-color').click();
+        //clicking on router
+        //cy.get('.ng-star-inserted">').click();
+        //cy.get('.gridster-item.chart-grid-item87-44.ng-star-inserted').click();
+        cy.get('tx').should('include.text','Router');
+
+    });
 
 
 
-
+ 
 
 
 });

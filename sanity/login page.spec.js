@@ -1,3 +1,5 @@
+const login=require('../../fixtures/')
+
 describe('login page', () => {
 
         it('login page',() => {

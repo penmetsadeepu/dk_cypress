@@ -37,6 +37,9 @@ describe('Reports Creation', () => {
         cy.get('.mat-button-wrapper').contains('UnShare').click();
         cy.get('[type="checkbox"]').uncheck(['.mat-checkbox-inner-container']);
         cy.get('.mat-checkbox-label').contains('Global').click();
+       // .parent()
+        //.find('p-checkbox')
+       // .click({multiple : true});
         cy.wait(2000);
         cy.get('.mat-button-wrapper').contains('Save').click();*/
 
