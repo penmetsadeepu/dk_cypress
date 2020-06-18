@@ -1,4 +1,4 @@
-const login=require('../../fixtures/')
+import login from '~cypress/integration/fixtures/login.json';
 
 describe('login page', () => {
 
