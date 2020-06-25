@@ -9,6 +9,7 @@ describe('Login', () => {
         cy.get('.submit').click();
       //  cy.wait(4000);
     });
+
     it('Checking Dashboard Portlets', () => {
         // clicking visualize button
         cy.get('.fa.fa-bar-chart.mat-icon.notranslate.material-icons.mat-icon-no-color').click();
@@ -20,42 +21,48 @@ describe('Login', () => {
         //Clicking Monitor button
         cy.get('mat-icon.fa.fa-heartbeat.mat-icon.notranslate.material-icons.mat-icon-no-color').click();
         
-        //clicking on router
-        cy.get('img[src="../../dataken/assets/images/topo/router1.png"]').click();  
-       // cy.get('[style="padding-right: 4px; color: black; font-size: 20px; font-weight: bold; cursor: pointer;"><!----><!----><!----><div _ngcontent-uek-c29"]').click();
-       /* cy.get('input').should(($input) => {
-          const val = $input.val()
-          expect(val).to.match(/0/)
-          expect(val).to.include('0')
-          expect(val).not.to.include('bar')*/
+        //clicking on router image:
+        //cy.get('img[src="../../dataken/assets/images/topo/router1.png"]').c
 
-})
-       //clicking on Switch
-       cy.get('img[src="../../dataken/assets/images/topo/switch1.png"]').click();
+       //Clicking on Total no of nodes:
+       cy.get('[style="display: block; transform: translate3d(0px, 0px, 0px); width: 185.645px; height: 107.387px;"]', { timeout: 6000}).find('[style="padding-right: 4px; color: black; font-size: 20px; font-weight: bold; cursor: pointer;"]', {timeout: 7000}).as('numberText').click({ multiple: true });
+       cy.get('.mat-button-wrapper').contains('Dashboard').click();
+       cy.wait(2000);
+
+       //clicking on Total no of nodes present in Switch:
+       cy.get('[style="display: block; transform: translate3d(196px, 0px, 0px); width: 185.645px; height: 107.387px;"]', { timeout: 6000}).find('[style="padding-right: 4px; color: black; font-size: 20px; font-weight: bold; cursor: pointer;"]', {timeout: 7000}).as('numberText').click({ multiple: true });
+       cy.get('.mat-button-wrapper').contains('Dashboard').click();
+       Cy.wait(2000);
        
-       //clicking on Firewall
-       cy.get('img[src="../../dataken/assets/images/topo/firewall1.png"]').click();
+       //clicking on Total no of nodes present in Firewalls:
+       cy.get('[style="display: block; transform: translate3d(391px, 0px, 0px); width: 185.645px; height: 107.387px;"]', { timeout: 6000}).find('[style="padding-right: 4px; color: black; font-size: 20px; font-weight: bold; cursor: pointer;"]', {timeout: 7000}).as('numberText').click({ multiple: true });
+       cy.get('.mat-button-wrapper').contains('Dashboard').click();
+       Cy.wait(2000);
+       
 
-       //clicking on Servers
-       cy.get('img[src="../../dataken/assets/images/topo/server1.png"]').click();
+       //clicking on Total no of nodes present in Servers:
+       cy.get('[style="display: block; transform: translate3d(587px, 0px, 0px); width: 185.645px; height: 107.387px;"]', { timeout: 6000}).find('[style="padding-right: 4px; color: black; font-size: 20px; font-weight: bold; cursor: pointer;"]', {timeout: 7000}).as('numberText').click({ multiple: true });
+       cy.get('.mat-button-wrapper').contains('Dashboard').click();
+       Cy.wait(2000);
 
-       //clicking on webserver
-       cy.get('img[src="../../dataken/assets/images/topo/webserver1.png"]').click();
+       //clicking on Total no of nodes present in Webservers:
+       cy.get('[style="display: block; transform: translate3d(0px, 117px, 0px); width: 185.645px; height: 107.387px;"]', { timeout: 6000}).find('[style="padding-right: 4px; color: black; font-size: 20px; font-weight: bold; cursor: pointer;"]', {timeout: 7000}).as('numberText').click({ multiple: true });
+       cy.get('.mat-button-wrapper').contains('Dashboard').click();
+       Cy.wait(2000);
 
-       //clicking on Database
-       cy.get('img[src="../../dataken/assets/images/topo/database1.png"]').click();
+       //clicking on Total no of nodes present in Databases
+       cy.get('[style="display: block; transform: translate3d(196px, 117px, 0px); width: 185.645px; height: 107.387px;"]', { timeout: 6000}).find('[style="padding-right: 4px; color: black; font-size: 20px; font-weight: bold; cursor: pointer;"]', {timeout: 7000}).as('numberText').click({ multiple: true });
+       cy.get('.mat-button-wrapper').contains('Dashboard').click();
+       Cy.wait(2000);
 
-       //clicking on Messaging
-       cy.get('img[src="../../dataken/assets/images/topo/messaging1.png"]').click();
+       //clicking on Total no of nodes present in Messaging
+       cy.get('[style="display: block; transform: translate3d(391px, 117px, 0px); width: 185.645px; height: 107.387px;"]', { timeout: 6000}).find('[style="padding-right: 4px; color: black; font-size: 20px; font-weight: bold; cursor: pointer;"]', {timeout: 7000}).as('numberText').click({ multiple: true });
+       cy.get('.mat-button-wrapper').contains('Dashboard').click();
+       Cy.wait(2000);
 
-       //click on Caching
-       cy.get('img[src="../../dataken/assets/images/topo/caching1.png"]').click();
-        
-        
-    });
-
-
-
- 
-
-
+       //clicking on Total no of nodes present in Caching
+       cy.get('[style="display: block; transform: translate3d(587px, 117px, 0px); width: 185.645px; height: 107.387px;"]', { timeout: 6000}).find('[style="padding-right: 4px; color: black; font-size: 20px; font-weight: bold; cursor: pointer;"]', {timeout: 7000}).as('numberText').click({ multiple: true });
+       cy.get('.mat-button-wrapper').contains('Dashboard').click();
+       Cy.wait(2000);
+    }); 
+});
