@@ -2,7 +2,7 @@ describe('Login', () => {
 
     beforeEach('successfully loads', () => {
         //   cy.visit('http://localhost:4200/');
-        cy.visit('http://159.89.169.89:8080/dataken');
+        cy.visit('http://192.168.70.19:8080/dataken');
         cy.wait(2000);
         cy.get('#username').type('admin');
         cy.get('#password').type('admin123');
@@ -10,9 +10,19 @@ describe('Login', () => {
         cy.wait(4000);
     });
     it('Checking Nodes in Topology/linked', () => {
+        
+        //Selcting the DB as favourite
+        // clicking visualize button
+        cy.get('.fa.fa-bar-chart.mat-icon.notranslate.material-icons.mat-icon-no-color').click();
+        cy.wait(2000);
+        cy.get('[placeholder = "Search & enter"]').type('EnterpriseDashboard{enter}');
+        cy.get('.mat-checkbox-inner-container.mat-checkbox-inner-container-no-side-margin').click();
+        cy.get('.mat-button-wrapper').contains('Favourite').click();
+        cy.wait(3000);
         //Clicking Monitor button
         cy.get('mat-icon.fa.fa-heartbeat.mat-icon.notranslate.material-icons.mat-icon-no-color').click();
         cy.wait(8000);
+
         cy.get('.mat-button-wrapper').contains('Topology').click();
         cy.wait(4000);
         cy.get('.mat-button-wrapper').contains('settings').click(); 
