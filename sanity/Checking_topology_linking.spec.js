@@ -7,7 +7,7 @@ describe('Login', () => {
         cy.get('#username').type('admin');
         cy.get('#password').type('admin123');
         cy.get('.submit').click();
-      //  cy.wait(400);
+        cy.wait(4000);
     });
     it('Checking Nodes in Topology/linked', () => {
         //Clicking Monitor button
