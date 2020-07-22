@@ -1,4 +1,4 @@
-describe('Login', () => {
+describe('Login', () => { 
 
     beforeEach('successfully loads', () => {
         //   cy.visit('http://localhost:4200/');
@@ -29,9 +29,10 @@ describe('Login', () => {
         cy.wait(4000);
         cy.get('.mat-menu-item').contains('Short-Path').click();
         cy.get('[placeholder = "source"]').type('192.168.70.177{enter}');
-        cy.get('[placeholder = "target"]').type('192.168.70.176{enter}');
+        cy.get('[placeholder = "target"]').type('192.168.70.162{enter}');
         cy.get('.mat-icon.notranslate.material-icons.mat-icon-no-color').contains('search').click();
-         
+        cy.get('[mattooltip="Render"]').click(); 
+        cy.wait(1000);
         
         /*cy.get('.ui-button-text.ui-clickable.ng-star-inserted').contains('Network').click();
         cy.get('[mattooltip="Render"]').click();

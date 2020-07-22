@@ -1,13 +1,13 @@
 describe('Login page', () => {
 
     beforeEach('successfully loads', () => {
-        //   cy.visit('http://localhost:4200/');
+        //   cy.visit('http://192.168.70.19:8080/dataken');
         cy.visit('http://159.89.169.89:8080/dataken');
         cy.wait(2000);
         cy.get('#username').type('admin');
         cy.get('#password').type('admin123');
         cy.get('.submit').click();
-      //  cy.wait(400);
+      //  cy.wait(40000);
     });
 
     it('Checking Dashboard Portlets', () => {
@@ -27,18 +27,18 @@ describe('Login page', () => {
         //cy.get('img[src="../../dataken/assets/images/topo/router1.png"]').click();
         
        //Clicking on Total no of nodes:
-       //cy.get('[style="display: block; transform: translate3d(0px, 0px, 0px); width: 130.161px; height: 70.0968px;"]', { timeout: 6000}).find('[style="padding-right: 4px; color: rgb(255, 0, 0); font-size: 20px; font-weight: bold; cursor: pointer;"]', {timeout: 7000}).as('numberText').click({ multiple: true });
+       //cy.get('[style="display: block; transform: translate3d(0px, 0px, 0px); width: 264.516px; height: 150.71px;"]', { timeout: 6000}).find('[style="padding-right: 4px; color: black; font-size: 20px; font-weight: bold; cursor: pointer;"]', {timeout: 7000}).as('numberText').click({ multiple: true });
        //cy.get('.mat-button-wrapper').contains('Dashboard').click();
        //cy.wait(2000);
 
-
+      
       //clicking on Total no of nodes present in Switch:
-       cy.get('[style="display: block; transform: translate3d(149px, 0px, 0px); width: 128.871px; height: 69.3226px;"]', { timeout: 6000}).find('[style="padding-right: 4px; color: black; font-size: 20px; font-weight: bold; cursor: pointer;"]', {timeout: 7000}).as('numberText').click({ multiple: true });
+       cy.get('[style="display: block; transform: translate3d(285px, 0px, 0px); width: 264.516px; height: 150.71px;"]', { timeout: 6000}).find('[style="padding-right: 4px; color: black; font-size: 20px; font-weight: bold; cursor: pointer;"]', {timeout: 7000}).as('numberText').click({ multiple: true });
        cy.get('.mat-button-wrapper').contains('Dashboard').click();
        cy.wait(2000);
        
-       //clicking on Total no of nodes present in Firewalls:
-       cy.get('[style="display: block; transform: translate3d(391px, 0px, 0px); width: 185.645px; height: 107.387px;"]', { timeout: 6000}).find('[style="padding-right: 4px; color: black; font-size: 20px; font-weight: bold; cursor: pointer;"]', {timeout: 7000}).as('numberText').click({ multiple: true });
+       /*//clicking on Total no of nodes present in Firewalls:
+       cy.get('[style="display: block; transform: translate3d(569px, 0px, 0px); width: 264.516px; height: 150.71px;"]', { timeout: 6000}).find('[style="padding-right: 4px; color: black; font-size: 20px; font-weight: bold; cursor: pointer;"]', {timeout: 7000}).as('numberText').click({ multiple: true });
        cy.get('.mat-button-wrapper').contains('Dashboard').click();
        cy.wait(2000);
        
@@ -66,6 +66,6 @@ describe('Login page', () => {
        //clicking on Total no of nodes present in Caching
        cy.get('[style="display: block; transform: translate3d(587px, 117px, 0px); width: 185.645px; height: 107.387px;"]', { timeout: 6000}).find('[style="padding-right: 4px; color: black; font-size: 20px; font-weight: bold; cursor: pointer;"]', {timeout: 7000}).as('numberText').click({ multiple: true });
        cy.get('.mat-button-wrapper').contains('Dashboard').click();
-       cy.wait(2000);
+       cy.wait(2000);*/
     }); 
   });
